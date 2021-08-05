@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Symfoni } from "./hardhat/SymfoniContext";
-import { Greeter } from './components/Greeter';
+import { Symfoni } from './hardhat/SymfoniContext';
+import { Garage } from './components/Garage';
 
 function App() {
 
@@ -22,7 +22,7 @@ function App() {
           >
             Learn React
         </a>
-          <Greeter></Greeter>
+          <Garage></Garage>
         </Symfoni>
       </header>
     </div>

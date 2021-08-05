@@ -27,6 +27,14 @@ task("accounts", "Prints the list of accounts", async (args, hre) => {
 const config: HardhatUserConfig = {
   react: {
     providerPriority: ["web3modal", "hardhat"],
+    providerOptions: {
+      walletconnect: {
+        options: {
+          // infuraId: "c229331f1d044c8f95e03f54b0ea2f26",
+          infuraId: "59d1a06eb92145aaa581576ee48c8388",
+        },
+      },
+    },
   },
   networks: {
     hardhat: {
@@ -35,6 +43,10 @@ const config: HardhatUserConfig = {
       accounts: {
         mnemonic: process.env.METAMASK_SEED_WORDS, // test test test test test test test test test test test junk
       },
+    },
+    rinkeby: {
+      url: process.env.RINKEBY_URL,
+      accounts: [process.env.ACCOUNT_1],
     },
   },
   solidity: {
